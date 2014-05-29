@@ -146,7 +146,7 @@
             });
             textCountry = d3.select('.country').text();
             textCountry = textCountry.split(' ');
-            d3.select('.country').text(textCountry[0] + separator(+el.attr('data-pays')));
+            d3.select('.country').text(textCountry[0] + separator + el.attr('data-pays'));
         }
         return d3.select('.more-info').style('display', 'inline-block').attr('data-pays', country);
       }

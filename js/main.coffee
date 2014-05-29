@@ -160,7 +160,7 @@ map =
 					# We change the text with a little split to keep only the first country
 					textCountry = d3.select('.country').text()
 					textCountry = textCountry.split ' '
-					d3.select('.country').text textCountry[0]+ separator +el.attr('data-pays')
+					d3.select('.country').text(textCountry[0] + separator + el.attr('data-pays'))
 
 			# In all cases, we have to display the button to display all datas from one (or to compare) countries
 			d3.select('.more-info').style('display', 'inline-block').attr('data-pays', country)
