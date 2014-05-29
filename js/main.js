@@ -101,7 +101,8 @@
         }
       }
       counter = counts.length;
-      if (el.classed('selected') === false) {
+      console.log(el.attr('fill'));
+      if (el.attr('fill') === hover) {
         switch (counter) {
           case 0:
             polygon.each(function() {

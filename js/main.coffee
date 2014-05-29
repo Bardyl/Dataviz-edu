@@ -87,7 +87,9 @@ map =
 
 		counter = counts.length
 
-		if el.classed('selected') is false
+		console.log el.attr('fill')
+
+		if el.attr('fill') == hover
 			switch counter
 				# No one was clicked
 				when 0 
