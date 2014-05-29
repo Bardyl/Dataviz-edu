@@ -107,7 +107,7 @@ map =
 		counter = counts.length
 
 		# To prevent from clicking two times on one country and selecting it two times...
-		if el.attr('fill') is hover
+		if el.attr('fill') is hover and el.classed('selected') is false
 			# All cases are under these line
 			switch counter
 				# No one was clicked
