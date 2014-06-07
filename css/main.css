@@ -11,6 +11,67 @@ body, html {
 	background:#fafafa;
 }
 
+div#blur {
+	width:100%;
+	height:100%;
+	background:#ffffff;
+	opacity: .95;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index:10000;
+	text-align: center;
+	transition: .8s;
+}
+
+div#blur.closed {
+	opacity: 0;
+}
+
+div.block400 {
+	width: 400px;
+	margin:auto;
+}
+
+div#blur h1 {
+	margin-top:100px;
+}
+
+div#blur h2 {
+	text-transform: uppercase;
+	color:#d95246;
+	font-weight: normal;
+	font-family: 'Rosario', sans-serif;
+	font-size: 1em;
+	margin:0;
+	margin-top: 50px;
+}
+
+div#blur p {
+	margin:0;
+	font-size: .8em;
+	font-style: normal;
+	margin-top: 10px;
+	color:#4a4a4a;
+}
+
+div#blur button {
+	border:1px solid #efd3ab;
+	background: rgb(239,211,171);
+	background: -moz-linear-gradient(top,  rgba(239,211,171,1) 0%, rgba(236,184,111,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,211,171,1)), color-stop(100%,rgba(236,184,111,1)));
+	background: -webkit-linear-gradient(top,  rgba(239,211,171,1) 0%,rgba(236,184,111,1) 100%);
+	background: linear-gradient(to bottom,  rgba(239,211,171,1) 0%,rgba(236,184,111,1) 100%);
+	color:#fff;
+	font-size: 1em;
+	margin-top:100px;
+	border-radius:5px;
+	padding:10px 25px;
+	cursor:pointer;
+}
+
 div#content {
 	position: relative;
 	z-index:1;
@@ -113,4 +174,62 @@ nav input {
 	width: 300px;
 	border: none;
 	background: ;
+}
+
+.title-pays {
+	font-size: 2em;
+	color:#fff;
+	position: absolute;
+	z-index:10000;
+	display: block;
+	width:200px;
+	height:200px;
+	background:#000;
+}
+
+.block960 {
+	width: 960px;
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -480px;
+}
+
+nav#filters {
+	display: block;
+	margin:auto;
+	width: 100%;
+	background:#f0f0f0;
+	border: 1px solid #dcdcdc;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px #aaa;
+}
+
+nav#filters div {
+	display: inline-block;
+	width: 60px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0;
+	border-right: 1px solid #dcdcdc;
+	border-left: 1px solid #f5f5f5;
+	position: relative;
+	cursor:pointer;
+}
+
+nav#filters div:last-child {
+	border-right: 1px solid #dcdcdc;
+}
+
+nav#filters div.active,
+nav#filters div:hover {
+	background: #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+	border-left: 1px solid #dcdcdc;
+}
+
+nav#filters div img {
+	position: relative;
+	top: 25%;
 }

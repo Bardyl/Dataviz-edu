@@ -1,6 +1,7 @@
 # SVG element
-svg = d3.select('svg')
-polygon = svg.selectAll('polygon')
+svg        = d3.select('svg')
+polygon    = svg.selectAll('polygon')
+filterList = d3.select('nav')
 
 # Height and width from window
 height = window.innerHeight
@@ -11,7 +12,7 @@ svgHeight = svg.attr('height')
 svgWidth = svg.attr('width')
 
 # Countries where we have some datas
-countries = ['Espagne', 'France', 'Italie', 'Grèce', 'Allemagne', 'Belgique', 'Royaume-Uni', 'Irlande', 'Suède', 'Finlande', 'Norvège']
+countries = ['Espagne', 'France', 'Italie', 'Grèce', 'Allemagne', 'Belgique', 'Royaume-Uni', 'Irlande', 'Suède', 'Finlande', 'Norvège', 'Luxembourg']
 
 # Phrases
 tipSelectOne   = 'Sélectionnez un des pays en couleur afin de découvrir quel est son modèle éducatif !'
@@ -33,6 +34,11 @@ updateWindow = () ->
 window.onresize = () ->
 	updateWindow()
 updateWindow()
+
+# Close popup window on click « j'ai compris »
+d3.select('#blur button')
+	.on 'click', () ->
+		d3.select('#blur').classed('closed', true)
 
 # Map
 map = 
@@ -165,6 +171,15 @@ map =
 			# In all cases, we have to display the button to display all datas from one (or to compare) countries
 			d3.select('.more-info').style('display', 'inline-block').attr('data-pays', country)
 
+filters = 
+	onClick: () ->
+		el = d3.select(this)
+		
+		filterList.selectAll('div').classed('active', false)
+		el.classed('active', true)
+
+
+
 # On click on reset button... we reset...
 d3.select('.reset-map').on 'click', map.init
 
@@ -174,7 +189,16 @@ polygon
 	.on 'mouseleave', map.onMouseLeave
 	.on 'click', map.onClick
 	# Fill countries (depends of if we have datas)
-	.each () ->
+	.each (d) ->
 		d3.select this
 			.attr 'fill', () ->
 				if countries.indexOf(d3.select(this).attr('data-pays')) > -1 then active else inactive
+
+
+# Action to do when click event on a filter
+filterList
+	.selectAll('div')
+	.on 'click', filters.onClick
+
+d3.select('.more-info')
+	.on 'click', () ->

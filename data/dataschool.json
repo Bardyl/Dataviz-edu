@@ -1,0 +1,459 @@
+{
+  "Europe": {
+    "debug": "on",
+    "Primaire": {
+      "Description": "Correspond au CITE 1"
+    },
+    "Collège": {
+      "Description": "Correspond au CITE 2"
+    },
+    "Lycée": {
+      "Description": "Correspond au CITE 3"
+    },
+    "Résultat test européen moyenne ocde": {
+      "Mathématiques": 494,
+      "Compréhension écrite": 496,
+      "Science": 501,
+      "Description": "Evaluation PISA 2012 sur 1000 points"
+    }
+  },
+  "France": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 22060,
+        "fin de carrière": 43783
+      },
+      "Heures d'enseignement annuel": 918,
+      "Cycle": {
+        "Nombre d'années du cycle": 5,
+        "Nombre d'années du cycle obligatoire": 5
+      }
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 24644,
+        "fin de carrière": 46507
+      },
+      "Heures d'enseignement annuel": 646,
+      "Cycle": {
+        "Nombre d'années du cycle": 4,
+        "Nombre d'années du cycle obligatoire": 4
+      }
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 24858,
+        "fin de carrière": 46742
+      },
+      "Heures d'enseignement annuel": 632,
+      "Cycle": {
+        "Nombre d'années du cycle": 3,
+        "Nombre d'années du cycle obligatoire": 1,
+        "Description": "arrêt à 16 ans"
+      }
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 5.9,
+    "PIB en 2010": 1936000000000,
+    "Résultat test européen": {
+      "Mathématiques": 495,
+      "Compréhension écrite": 505,
+      "Science": 499
+    },
+    "Nombre d'années totale obligatoire": {
+      "Nombre": 10,
+      "Description": "de 6 à 16 ans"
+    }
+  },
+  "Allemagne": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 39688,
+        "fin de carrière": 52292
+      },
+      "Heures d'enseignement annuel": 805,
+      "Cycle": {
+        "Nombre d'années du cycle": 4,
+        "Nombre d'années du cycle obligatoire": 4
+      }
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 43620,
+        "fin de carrière": 58599
+      },
+      "Heures d'enseignement annuel": 756,
+      "Cycle": {
+        "Nombre d'années du cycle": 6,
+        "Nombre d'années du cycle obligatoire": 6
+      }
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 46102,
+        "fin de carrière": 65298
+      },
+      "Heures d'enseignement annuel": 713,
+      "Cycle": {
+        "Nombre d'années du cycle": 3,
+        "Nombre d'années du cycle obligatoire": 0,
+        "Nombre d'années du cycle obligatoire à temps partiel": 3
+      }
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 5.1,
+    "PIB en 2010": 2669591355918,
+    "Résultat test européen": {
+      "Mathématiques": 514,
+      "Compréhension écrite": 508,
+      "Science": 524
+    },
+    "Nombre d'années totale obligatoire": {
+      "Nombre": 10,
+      "Nombre temps partiel": 13,
+      "Description": "de 6 à 16 ans (ou 19ans)"
+    }
+  },
+  "Luxembourg": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 63895,
+        "fin de carrière": 112736
+      },
+      "Heures d'enseignement annuel": 739,
+      "Nombre d'années du cycle": 6,
+      "Nombre d'années du cycle obligatoire": 6
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 72332,
+        "fin de carrière": 125671
+      },
+      "Heures d'enseignement annuel": 634,
+      "Nombre d'années du cycle": 3,
+      "Nombre d'années du cycle obligatoire": 3
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 72332,
+        "fin de carrière": 125671
+      },
+      "Heures d'enseignement annuel": 634,
+      "Nombre d'années du cycle": 4,
+      "Nombre d'années du cycle obligatoire": 1,
+      "Description": "arrêt à 16 ans"
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 3.1,
+    "PIB en 2010": 42597286538,
+    "Résultat test européen": {
+      "Mathématiques": 490,
+      "Compréhension écrite": 488,
+      "Science": 491
+    },
+    "Nombre d'années totale obligatoire": {
+      "Nombre": 12,
+      "Description": "de 4 à 16 ans"
+    }
+  },
+  "Finlande": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 29272,
+        "fin de carrière": 40035
+      },
+      "Heures d'enseignement annuel": 680,
+      "Cycle": {
+        "Nombre d'années du cycle": 6,
+        "Nombre d'années du cycle obligatoire": 6,
+        "Description": "Tronc commun (9 ans en tout)"
+      }
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 31614,
+        "fin de carrière": 43238
+      },
+      "Heures d'enseignement annuel": 595,
+      "Cycle": {
+        "Nombre d'années du cycle": "",
+        "Nombre d'années du cycle obligatoire": ""
+      }
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 32547,
+        "fin de carrière": 45758
+      },
+      "Heures d'enseignement annuel": 553,
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 6.8,
+    "PIB en 2010": 188465350556,
+    "Résultat test européen": {
+      "Mathématiques": 519,
+      "Compréhension écrite": 524,
+      "Science": 545
+    },
+    "Nombre d'années totale obligatoire": {
+      "Nombre": 10,
+      "Description": "de 6 à 16 ans (ou 19ans)"
+    }
+  },
+  "Norvège": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 38595,
+        "fin de carrière": 47793
+      },
+      "Heures d'enseignement annuel": 741,
+      "Cycle": {
+        "Nombre d'années du cycle": 7,
+        "Nombre d'années du cycle obligatoire": 7,
+        "Description": "Tronc commun, 10 ans en tout"
+      }
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 38595,
+        "fin de carrière": 47793
+      },
+      "Heures d'enseignement annuel": 654,
+      "Cycle": {
+        "Nombre d'années du cycle": 3,
+        "Nombre d'années du cycle obligatoire": 3,
+        "Description": "3 dernières années du tronc commun"
+      }
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 42572,
+        "fin de carrière": 50586
+      },
+      "Heures d'enseignement annuel": 523,
+      "Cycle": {
+        "Nombre d'années du cycle": 3,
+        "Nombre d'années du cycle obligatoire": 0
+      }
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 6.9,
+    "PIB en 2010": 331941993663,
+    "Résultat test européen": {
+      "Mathématiques": 489,
+      "Compréhension écrite": 504,
+      "Science": 495
+    },
+    "Nombre d'années totale obligatoire": {
+      "Nombre": 10,
+      "Description": "de 6 à 16 ans"
+    }
+  },
+  "Espagne": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 29374,
+        "fin de carrière": 40989
+      },
+      "Heures d'enseignement annuel": 880,
+      "Cycle": {
+        "Nombre d'années du cycle": 6,
+        "Nombre d'années du cycle obligatoire": 6
+      }
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 32839,
+        "fin de carrière": 45927
+      },
+      "Heures d'enseignement annuel": 713,
+      "Cycle": {
+        "Nombre d'années du cycle": 4,
+        "Nombre d'années du cycle obligatoire": 4
+      }
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 33477,
+        "fin de carrière": 46879
+      },
+      "Heures d'enseignement annuel": 693,
+      "Cycle": {
+        "Nombre d'années du cycle": 2,
+        "Nombre d'années du cycle obligatoire": 0
+      }
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 5.0,
+    "PIB en 2010": 1116889268015,
+    "Résultat test européen": {
+      "Mathématiques": 484,
+      "Compréhension écrite": 488,
+      "Science": 496
+    },
+    "Nombre d'années totale obligatoire": {
+      "Nombre": 10,
+      "Description": "de 6 à 16 ans"
+    }
+  },
+  "Royaume-Uni": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 23898,
+        "fin de carrière": 34929
+      },
+      "Heures d'enseignement annuel": 684,
+      "Cycle": {
+        "Nombre d'années du cycle": 6,
+        "Nombre d'années du cycle obligatoire": 6
+      }
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 23898,
+        "fin de carrière": 34929
+      },
+      "Heures d'enseignement annuel": 703,
+      "Cycle": {
+        "Nombre d'années du cycle": 3,
+        "Nombre d'années du cycle obligatoire": 3
+      }
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 23898,
+        "fin de carrière": 34929
+      },
+      "Heures d'enseignement annuel": 703,
+      "Cycle": {
+        "Nombre d'années du cycle": 4,
+        "Nombre d'années du cycle obligatoire": 2
+      }
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 6.2,
+    "PIB en 2010": 1771930294906,
+    "Résultat test européen": {
+      "Mathématiques": 494,
+      "Compréhension écrite": 499,
+      "Science": 514
+    },
+    "Nombre d'années totale obligatoire": {
+      "Nombre": 11,
+      "Description": "de 5 à 16 ans"
+    }
+  },
+  "Belgique": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 28338,
+        "fin de carrière": 49011
+      },
+      "Heures d'enseignement annuel": 761,
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 28337,
+        "fin de carrière": 49011
+      },
+      "Heures d'enseignement annuel": 675,
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 35375,
+        "fin de carrière": 62028
+      },
+      "Heures d'enseignement annuel": 630,
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 6.6,
+    "PIB en 2010": 374791615890,
+    "Résultat test européen": {
+      "Mathématiques": 494,
+      "Compréhension écrite": 499,
+      "Science": 514
+    }
+  },
+  "Grèce": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": "",
+        "fin de carrière": ""
+      },
+      "Heures d'enseignement annuel": "",
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": "",
+        "fin de carrière": ""
+      },
+      "Heures d'enseignement annuel": "",
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": "",
+        "fin de carrière": ""
+      },
+      "Heures d'enseignement annuel": "",
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 4.0,
+    "PIB en 2010": 247790234787,
+    "Résultat test européen": {
+      "Mathématiques": 494,
+      "Compréhension écrite": 499,
+      "Science": 514
+    }
+  },
+  "Italie": {
+    "debug": "on",
+    "Primaire": {
+      "Salaire enseignant annuel": {
+        "début de carrière": "",
+        "fin de carrière": ""
+      },
+      "Heures d'enseignement annuel": "",
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Collège": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 24651,
+        "fin de carrière": 36963
+      },
+      "Heures d'enseignement annuel": 630,
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Lycée": {
+      "Salaire enseignant annuel": {
+        "début de carrière": 24651,
+        "fin de carrière": 38645
+      },
+      "Heures d'enseignement annuel": 630,
+      "Nombre d'années du cycle": "",
+      "Nombre d'années du cycle obligatoire": ""
+    },
+    "Budget alloué à l'éducation en pourcentage du PIB en 2010": 4.5,
+    "PIB en 2010": 1438698367048,
+    "Résultat test européen": {
+      "Mathématiques": 485,
+      "Compréhension écrite": 490,
+      "Science": 494
+    }
+  }
+}
