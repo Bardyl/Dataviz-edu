@@ -28,6 +28,7 @@ div#blur {
 
 div#blur.closed {
 	opacity: 0;
+	z-index:-1;
 }
 
 div.block400 {
