@@ -1,0 +1,38 @@
+{
+	"noFilter": {
+		"short": "Aucun filtre actif",
+		"html" : "Aucun filtre actif"
+	},
+	"test": {
+		"short": "Résultat au test européen",
+		"html" : "Résultat au test européen PISA de 2012 (sur 1000 points)"
+	},
+	"ratioHF": {
+		"short": "Ratio Homme/Femme (enseignants)",
+		"html" : "Ratio des enseignants homme/femme (en pourcentage)"
+	},
+	"sport": {
+		"short": "Place du sport",
+		"html" : "Place du sport au sein du planning scolaire (temps minimum par an en pourcentage)"
+	},
+	"salaire": {
+		"short": "Salaire annuel par enseignant",
+		"html" : "Salaire annuel d’un enseignant en début et en fin de carrière (en euros)"
+	},
+	"cycle": {
+		"short": "Nombre d'années par cycle",
+		"html" : "Nombre d’années du cycle obligatoire / non obligatoire"
+	},
+	"coutEtudiant": {
+		"short": "Coût d'un étudiant",
+		"html" : "Coût d’un élève par an (en euros)"
+	},
+	"encadrement": {
+		"short": "Encadrement scolaire",
+		"html" : "Encadrement scolaire"
+	},
+	"rythme": {
+		"short": "Rythme scolaire",
+		"html" : "Rythme scolaire (jours de classe / vacances)"
+	}
+}

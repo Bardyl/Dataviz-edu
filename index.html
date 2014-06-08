@@ -7,7 +7,15 @@
 </head>
 <body>
 
-	<div id="blur">
+	<header>
+		<!-- logo, baseline, informations -->
+		<a href="#"><img src="img/info.png" alt="Informations" /></a>
+		<div class="info">
+			<p id="tip">Sélectionnez un des pays en couleur afin de découvrir quel est son modèle éducatif !</p>
+		</div>
+	</header>
+
+	<div id="blur" class="closed">
 		<div class="block400">
 			<h1>DataSchool</h1>
 			<span class="baseline">Découvrez les modèles éducatifs des pays européens !</span>
@@ -19,9 +27,33 @@
 		</div>
 	</div>
 
+	<section id="displayData" class="">
+		<img id="closeDataView" src="img/arrow.png" />
+		<nav>
+			<span id="active-filter"></span>
+			<div data-filter="noFilter" class="active"><img src="img/icons/nofiltre.png" alt=""></div><div data-filter="test"><img src="img/icons/test.png" alt=""></div><div data-filter="ratioHF"><img src="img/icons/ratio_hf.png" alt=""></div><div data-filter="sport"><img src="img/icons/sport.png" alt=""></div><div data-filter="salaire"><img src="img/icons/salaire.png" alt=""></div><div data-filter="cycle"><img src="img/icons/cycle.png" alt=""></div><div data-filter="coutEtudiant"><img src="img/icons/cout_etudiant.png" alt=""></div><div data-filter="encadrement"><img src="img/icons/encadrement.png" alt=""></div><div data-filter="rythme"><img src="img/icons/rythme.png" alt=""></div>
+		</nav>
+		<div id="compare">
+			<span>Comparer :</span>
+			<span>Allemagne</span>
+			<span>Belgique</span>
+			<span>Espagne</span>
+			<span>Finlande</span>
+			<span>France</span>
+			<span>Grèce</span>
+			<span>Italie</span>
+			<span>Luxembourg</span>
+			<span>Norvège</span>
+			<span>Royaume-Uni</span>
+		</div>
+		<div id="datas">
+			<h2></h2>
+		</div>
+	</section>
+
 	<div id="content">
 
-		<div id="leftContent">
+		<div id="leftContent" class="">
 			<section>
 				<!-- SVG map (d3.js) -->
 				<svg width="1245" height="990" viewBox="0 100 1245 990"version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -797,18 +829,10 @@
 				</div>
 			</section>
 
-			<header>
-				<!-- logo, baseline, informations -->
-				<a href="#"><img src="img/info.png" alt="Informations" /></a>
-				<div class="info">
-					<p id="tip">Sélectionnez un des pays en couleur afin de découvrir quel est son modèle éducatif !</p>
-				</div>
-			</header>
-
 			<div class="block960">
-				<nav id="filters">
+ 				<!-- <nav id="filters" class="">
 					<div data-filter="" class="filter active"><img src="img/icons/enseignant_sexe.png" alt="" /></div><div data-filter=""  class="filter"><img src="img/icons/heure_min.png" alt="" /></div><div data-filter="salaire_enseignant_moyen"  class="filter"><img src="img/icons/salaire.png" alt="" /></div><div data-filter=""  class="filter"><img src="img/icons/sport.png" alt=""></div><div data-filter="" class="filter"><img src="img/icons/test_europeen.png" alt="" /></div>
-				</nav>
+				</nav> -->
 			</div>
 
 		</div>

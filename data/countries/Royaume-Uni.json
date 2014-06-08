@@ -1,0 +1,113 @@
+{
+  "preposition": "du ",
+  "Primaire": {
+    "Salaire enseignant annuel": {
+      "début de carrière": 30289,
+      "fin de carrière": 44269
+    },
+    "Heures d'enseignement annuel": 684,
+    "Cycle": {
+      "Nombre d'années du cycle": 6,
+      "Nombre d'années du cycle obligatoire": 6
+    },
+    "Parité": {
+      "Pourcentage d'homme enseignant": 13,
+      "Pourcentage de femme enseignante": 87
+    },
+    "Sport": {
+      "Pourcentage du temps minimal obligtoire par rapport à l'enseignement total": "flexible",
+      "Nombre d'heures minimales recommandées obligatoires par an": "flexible"
+    },
+    "Rythme scolaire": {
+      "Jours de classe dans l'année": 190,
+      "Nombre de jours par semaine": 5,
+      "Vacances d'été en semaines": 6,
+      "Vacances totales en semaines": 13,
+      "Nombre de matières": 10
+    },
+    "Encadrement": {
+      "Nombre moyen d'élèves par classe": 24.8,
+      "Nombre d'élèves par enseignant": 17
+    },
+    "Coût": {
+      "Coût d'un élève par an (€)": 7611
+    }
+  },
+  "Collège": {
+    "Salaire enseignant annuel": {
+      "début de carrière": 30289,
+      "fin de carrière": 44269
+    },
+    "Heures d'enseignement annuel": 703,
+    "Cycle": {
+      "Nombre d'années du cycle": 3,
+      "Nombre d'années du cycle obligatoire": 3
+    },
+    "Parité": {
+      "Pourcentage d'homme enseignant": 38,
+      "Pourcentage de femme enseignante": 62
+    },
+    "Sport": {
+      "Pourcentage du temps minimal obligtoire par rapport à l'enseignement total": "flexible",
+      "Nombre d'heures minimales recommandées obligatoires par an": "flexible"
+    },
+    "Rythme scolaire": {
+      "Jours de classe dans l'année": 190,
+      "Nombre de jours par semaine": 5,
+      "Vacances d'été en semaines": 6,
+      "Vacances totales en semaines": 13,
+      "Nombre de matières": 10
+    },
+    "Encadrement": {
+      "Nombre moyen d'élèves par classe": 19.5,
+      "Nombre d'élèves par enseignant": "n.c."
+    },
+    "Coût": {
+      "Coût d'un élève par an (€)": 8491
+    }
+  },
+  "Lycée": {
+    "Salaire enseignant annuel": {
+      "début de carrière": 30289,
+      "fin de carrière": 44269
+    },
+    "Heures d'enseignement annuel": 703,
+    "Cycle": {
+      "Nombre d'années du cycle": 4,
+      "Nombre d'années du cycle obligatoire": 2
+    },
+    "Parité": {
+      "Pourcentage d'homme enseignant": 37.6,
+      "Pourcentage de femme enseignante": 62.4
+    },
+    "Sport": {
+      "Pourcentage du temps minimal obligtoire par rapport à l'enseignement total": 0,
+      "Nombre d'heures minimales recommandées obligatoires par an": 0
+    },
+    "Rythme scolaire": {
+      "Jours de classe dans l'année": 190,
+      "Nombre de jours par semaine": 5,
+      "Vacances d'été en semaines": 6,
+      "Vacances totales en semaines": 13,
+      "Nombre de matières": 11
+    },
+    "Encadrement": {
+      "Nombre moyen d'élèves par classe": "n.c.",
+      "Nombre d'élèves par enseignant": "n.c."
+    },
+    "Coût": {
+      "Coût d'un élève par an (€)": 8491
+    }
+  },
+  "Budget alloué à l'éducation en pourcentage du PIB en 2010": 6.2,
+  "PIB en 2010": 1771930294906,
+  "Résultat test européen": {
+    "Mathématiques": 494,
+    "Compréhension écrite": 499,
+    "Science": 514
+  },
+  "Nombre d'années totale obligatoire": {
+    "Nombre": 11,
+    "Description": "de 5 à 16 ans"
+  }  
+}

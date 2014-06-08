@@ -29,7 +29,7 @@
     }
   },
   "France": {
-    "debug": "on",
+    "preposition": "de la ",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 25646,
@@ -143,7 +143,7 @@
     }
   },
   "Allemagne": {
-    "debug": "on",
+    "preposition": "de l'",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 47488,
@@ -258,7 +258,7 @@
     }
   },
   "Luxembourg": {
-    "debug": "on",
+    "preposition": "du ",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 64043,
@@ -372,7 +372,7 @@
     }
   },
   "Finlande": {
-    "debug": "on",
+    "preposition": "de la ",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 30587,
@@ -488,7 +488,7 @@
     }
   },
   "Norvège": {
-    "debug": "on",
+    "preposition": "de la ",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 33350,
@@ -603,7 +603,7 @@
     }
   },
   "Espagne": {
-    "debug": "on",
+    "preposition": "de l'",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 35881,
@@ -716,7 +716,7 @@
     }
   },
   "Royaume-Uni": {
-    "debug": "on",
+    "preposition": "du ",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 30289,
@@ -829,7 +829,7 @@
     }
   },
   "Belgique": {
-    "debug": "on",
+    "preposition": "de la",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 31515,
@@ -944,7 +944,7 @@
     }
   },
   "Grèce": {
-    "debug": "on",
+    "preposition": "de la ",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 22803,
@@ -1057,7 +1057,7 @@
     }
   },
   "Italie": {
-    "debug": "on",
+    "preposition": "de l'",
     "Primaire": {
       "Salaire enseignant annuel": {
         "début de carrière": 27288,

@@ -1,7 +1,7 @@
 # SVG element
 svg        = d3.select('svg')
 polygon    = svg.selectAll('polygon')
-filterList = d3.select('nav')
+filterList = d3.select('#displayData nav')
 
 # Height and width from window
 height = window.innerHeight
@@ -12,18 +12,22 @@ svgHeight = svg.attr('height')
 svgWidth = svg.attr('width')
 
 # Countries where we have some datas
-countries = ['Espagne', 'France', 'Italie', 'Grèce', 'Allemagne', 'Belgique', 'Royaume-Uni', 'Irlande', 'Suède', 'Finlande', 'Norvège', 'Luxembourg']
+countries = ['Espagne', 'France', 'Italie', 'Grèce', 'Allemagne', 'Belgique', 'Royaume-Uni', 'Finlande', 'Norvège', 'Luxembourg']
 
 # Phrases
 tipSelectOne   = 'Sélectionnez un des pays en couleur afin de découvrir quel est son modèle éducatif !'
 tipSelectTwo   = 'Sélectionnez un deuxième pays afin de comparer ses données au premier !'
 tipSelectOther = 'Cliquez sur un autre pays pour changer votre deuxième sélection ou réinitialisez pour recommencer.'
 separator      = ' et '
+modelEducatif  = 'Le modèle éducatif '
 
 # Colors
 active   = '#f5b355'
 inactive = '#f8f8f8'
 hover    = '#06A59B'
+
+# Popup
+popupAtStart = true
 
 # Update window 
 updateWindow = () ->
@@ -36,9 +40,15 @@ window.onresize = () ->
 updateWindow()
 
 # Close popup window on click « j'ai compris »
+popupAtStart = localStorage.getItem 'blurInfos'
+
+if popupAtStart is null
+	d3.select('#blur').classed('closed', false)
+
 d3.select('#blur button')
-	.on 'click', () ->
-		d3.select('#blur').classed('closed', true)
+.on 'click', () ->
+	d3.select('#blur').classed('closed', true)
+	localStorage.setItem('blurInfos', 'bonjour')
 
 # Map
 map = 
@@ -172,12 +182,48 @@ map =
 			d3.select('.more-info').style('display', 'inline-block').attr('data-pays', country)
 
 filters = 
+	onMouseOver: () ->
+		info = d3.select(this).attr('data-filter')
+		d3.json 'data/filters.json', (root) ->
+			d3.select('#active-filter').text(root[info].short)
+	
+	onMouseLeave: () ->
+		filterList.selectAll('div')
+			.each () ->
+				if d3.select(this).classed('active') is true
+					info = d3.select(this).attr('data-filter')
+					d3.json 'data/filters.json', (root) ->
+						d3.select('#active-filter').text(root[info].short)					
+
 	onClick: () ->
 		el = d3.select(this)
 		
 		filterList.selectAll('div').classed('active', false)
 		el.classed('active', true)
 
+		d3.json 'data/filters.json', (root) ->
+			d3.select('#active-filter').text(root[info].short)
+
+datas = 
+	init: () ->
+		# Visual blocks transitions
+		d3.select('#leftContent').classed('extended', true)
+		d3.select('#displayData').classed('dataPanelOpened', true)
+		d3.select('#filters').classed('closed', true)
+
+		# Reinitialize map
+		map.init
+
+		el = d3.select(this)
+		
+		# Display data for country selected
+		d3.json 'data/countries/'+el.attr('data-pays')+'.json', (root) ->
+			d3.select('#datas h2').text modelEducatif+root.preposition+el.attr('data-pays')
+
+	close: () ->
+		d3.select('#leftContent').classed('extended', false)
+		d3.select('#displayData').classed('dataPanelOpened', false)
+		d3.select('#filters').classed('closed', false)
 
 
 # On click on reset button... we reset...
@@ -197,8 +243,15 @@ polygon
 
 # Action to do when click event on a filter
 filterList
+	.on 'mouseleave', filters.onMouseLeave
 	.selectAll('div')
+	.on 'mouseover', filters.onMouseOver
 	.on 'click', filters.onClick
 
+# Action on click more-info button
 d3.select('.more-info')
-	.on 'click', () ->
+	.on 'click', datas.init
+
+# Action on click right arrow
+d3.select('#closeDataView')
+	.on 'click', datas.close
