@@ -1,6 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather:300,400italic);
 @import url(http://fonts.googleapis.com/css?family=Rosario);
 
+@import url(graph/salaire.css);
+@import url(graph/test.css);
+@import url(graph/ratioHF.css);
+@import url(graph/cycle.css);
+@import url(graph/coutEtudiant.css);
+@import url(graph/encadrement.css);
+@import url(graph/rythme.css);
+@import url(graph/sport.css);
+
+
 body, html {
 	margin: 0;
 	width: 100%;
@@ -393,6 +403,61 @@ section#displayData nav div img {
 	background:#ffffff;
 }
 
+#datas h3 {
+	color: #a5a5a5;
+	font-size: .85em;
+	margin: 0;
+	margin: 20px 0 0 20px;
+	font-style: italic;
+	font-weight: normal;
+}
+
+#datas > div {
+	opacity: 0;
+	transition: .8s;
+	position: absolute;
+	left: 0;
+	top: 100px;
+}
+
+#datas > div.active {
+	opacity: 1;
+}
+
+#noFilter {
+	position: relative;
+	width: 100%;
+}
+
+#noFilter div:first-child {
+	width:245px;
+	position: absolute;
+	right:200px;
+	top: 60px;
+	font-size: .8em;
+	font-style: italic;
+}
+
+#noFilter div:first-child img {
+	position: absolute;
+	right: -100px;
+	top: -45px;
+}
+
+#noFilter div:last-child {
+	width: 240px;
+	position: absolute;
+	left: 180px;
+	top: 210px;
+	font-size: .8em;
+	font-style: italic;
+}
+
+#noFilter div:last-child img {
+	position: absolute;
+	left:-130px;
+	top:0px;
+}
 @keyframes blink {
 	0% {opacity: 1;}
 	50% {opacity: .5;}

@@ -1,5 +1,5 @@
 # SVG element
-svg        = d3.select('svg')
+svg        = d3.select('#leftContent svg')
 polygon    = svg.selectAll('polygon')
 filterList = d3.select('#displayData nav')
 
@@ -181,28 +181,300 @@ map =
 			# In all cases, we have to display the button to display all datas from one (or to compare) countries
 			d3.select('.more-info').style('display', 'inline-block').attr('data-pays', country)
 
+
+graph = 
+	init: (filter) ->
+		d3.json 'data/filters.json', (root) ->
+			if filter == 'noFilter'
+				d3.select('#graph-description').html('')
+			else
+				d3.select('#graph-description').html(root[filter].html)
+
+		d3.selectAll('#datas > div').classed('active', false)
+		d3.select('#'+filter).classed('active', true)
+
+		graph.createGraph(filter)
+
+	createGraph: (filter) ->
+		el          = d3.select('#'+filter)
+		country     = d3.select('#displayData').attr('data-pays')
+
+		switch filter
+			when 'coutEtudiant'
+				cycles = ['primaire', 'college', 'lycee']
+				d3.json 'data/countries/'+country+'.json', (data) ->
+					numbers = data[filter]
+					for key in cycles
+						d3.select('#coutEtudiant .'+key+' span').text numbers[key]['cout']
+
+			when 'encadrement'
+				cycles = ['primaire', 'college', 'lycee']
+				d3.json 'data/countries/'+country+'.json', (data) ->
+					data = data[filter]
+					for key in cycles
+						d3.select('#encadrement .'+key+' .elevesParClass .value').text data[key]['elevesParClass']
+						d3.select('#encadrement .'+key+' .elevesParEnseignant .value').text data[key]['elevesParEnseignant']
+
+			when 'rythme'
+				d3.selectAll('#rythme .graph-bar .totalStudy').style('width', '0%')
+				d3.selectAll('#rythme .graph-bar .totalVacs').style('width', '0%')
+				cycles = ['primaire', 'college', 'lycee']
+				d3.json 'data/countries/'+country+'.json', (data) ->
+					data = data[filter]
+					for key in cycles
+						percentageWork = (data[key]['daysByYear'] / data[key]['daysByWeek']) * 100 / 52
+						percentageVacs = data[key]['totalVacs'] * 100 / 52
+
+						d3.select('#rythme .'+key+' .graph-bar .totalStudy').transition().duration(1500).style('width', (percentageWork-2)+'%')
+						d3.select('#rythme .'+key+' .graph-bar .totalVacs').transition().duration(1500).style('width', (percentageVacs-2)+'%')
+
+						d3.select('#rythme .'+key+' .graph-data .totalStudy').attr('style', 'width:'+(percentageWork-2)+'%')
+						d3.select('#rythme .'+key+' .graph-data .totalVacs').attr('style', 'width:'+(percentageVacs-2)+'%')
+
+						d3.select('#rythme .'+key+' .graph-data .totalStudy > span:first-child span').text data[key]['daysByYear']
+						d3.select('#rythme .'+key+' .graph-data .totalStudy > span:last-child span').text data[key]['daysByWeek']
+
+						d3.select('#rythme .'+key+' .graph-data .totalVacs > span:first-child span').text data[key]['summerVacs']
+						d3.select('#rythme .'+key+' .graph-data .totalVacs > span:last-child span').text data[key]['totalVacs']
+
+			when 'salaire'
+				d3.selectAll('#salaire .graph-start').style('width', '0%')
+				d3.selectAll('#salaire .graph-end').style('width', '0%')
+
+				salaires = []
+				cycles   = ['primaire', 'college', 'lycee']
+				d3.json 'data/countries/'+country+'.json', (data) ->
+					salaires = data[filter]
+					for key in cycles
+						salaireStart = salaires[key]['start']
+						salaireEnd   = salaires[key]['end']
+
+						d3.select('#salaire .'+key+' .start').text salaireStart
+						d3.select('#salaire .'+key+' .preetyName').text salaires[key]['preetyName']
+						d3.select('#salaire .'+key+' .end').text salaireEnd
+
+						percentage = salaireStart * 100 / salaireEnd
+
+						d3.select('#salaire .'+key+' .graph-start').transition().duration(1500).style('width', percentage+'%')
+						d3.select('#salaire .'+key+' .graph-end').transition().duration(1500).style('width', '100%')
+			
+			when 'cycle'
+				d3.select('#cycle .graph-bar').style('width', '0%')
+				cycles = ['primaire', 'college', 'lycee']
+				d3.json 'data/countries/'+country+'.json', (data) ->
+					data = data[filter]
+					nombreTotalAnnees = []
+
+					for key in cycles
+						nombreTotalAnnees.push data[key]['number']
+					
+					sum = nombreTotalAnnees.reduce (pv, cv) -> pv + cv
+
+					for key in cycles
+						nombreAnneesCycles = data[key]['number']
+						nombreAnneesOblig  = data[key]['numberOblig']
+						heuresParAn        = data[key]['hours']
+
+						d3.select('#cycle .graph-bar').transition().duration(2000).style('width', '100%')
+
+						percentageWidth = nombreAnneesCycles * 100 / sum 
+						d3.selectAll('#cycle .'+key).attr('style', 'width:'+(percentageWidth-1)+'%')
+
+						percentageCycleWidth = nombreAnneesOblig * 100 / nombreAnneesCycles
+						d3.selectAll('#cycle .'+key+' .nombreAnneesOblig').attr('style', 'width:'+percentageCycleWidth+'%')
+						d3.selectAll('#cycle .'+key+' .nombreAnneesNonOblig').attr('style', 'margin-left:'+(percentageCycleWidth)+'%')
+
+						d3.select('#cycle .numbers .'+key+' .nombreAnneesOblig').transition().text nombreAnneesOblig
+
+						if nombreAnneesCycles - nombreAnneesOblig != 0
+							d3.select('#cycle .numbers .'+key+' .nombreAnneesNonOblig').text(nombreAnneesCycles - nombreAnneesOblig)
+
+						d3.select('#cycle .cycle .'+key+' span:last-child').text(heuresParAn+'h par an')
+
+			when 'test'
+				scores   = []
+				matieres = ['maths', 'ecrit', 'science']
+				d3.selectAll('#test .graph-bar').style('height', '0%')
+				
+				d3.json 'data/countries/'+country+'.json', (data) ->
+					scores = data[filter]
+					for key in matieres
+						score = scores[key]['score']
+
+						d3.select('#test .'+key+' .preetyName').text scores[key]['preetyName']
+						d3.select('#test .'+key+' .score').text score
+
+						percentage = score * 100 / 1000
+
+						d3.select('#test .'+key+' .graph-bar').transition().duration(1000).style('height', percentage+'%')
+
+			when 'ratioHF'
+				d3.selectAll('#ratioHF div').remove()
+
+				ratios = []
+				cycles = ['primaire', 'college', 'lycee']
+				d3.json 'data/countries/'+country+'.json', (data) ->
+					ratios = data[filter]
+					for key in cycles
+						man   = ratios[key]['man']
+						women = ratios[key]['women']
+
+						ratio = [{"label": "Homme", "value": man, "color": "#f6c37a", "textColor": '#834d00'},
+								 {"label": "Femme", "value": women, "color": "#45b4a4", "textColor": '#005046'}]
+
+						width  = 150
+						height = 150
+						radius = 75
+
+						vis = d3.select('#ratioHF')
+							.append('div')
+								.classed(key, true)
+								.append('svg:svg')
+								.data([ratio])
+									.attr('width', width)
+									.attr('height', height)
+								.append('svg:g')
+									.attr('transform', 'translate('+radius+','+radius+')')
+
+						d3.select('#ratioHF > div:last-child')
+							.append('span')
+								.classed('preetyName', true)
+								.text (d, i) -> ratios[key].preetyName
+
+						arc = d3.svg.arc()
+							.outerRadius(radius)
+
+						pie = d3.layout.pie()
+							.value (d) -> d.value
+
+						arcs = vis.selectAll('g.slice')
+							.data(pie)
+							.enter()
+								.append('svg:g')
+									.attr('class', 'slice')
+
+						arcs.append('svg:path')
+							.attr('fill', (d, i) -> ratio[i].color)
+							.attr('d', arc)
+
+						arcs.append('svg:text')
+							.attr 'transform', (d) ->
+								d.innerRadius = 0
+								d.outerRadius = radius
+								"translate(" + arc.centroid(d) + ")"
+
+							.attr('text-anchor', "middle")
+							.attr('fill', (d, i) -> ratio[i].textColor)
+							.attr('style', 'font-size:.7em')
+							.text((d, i) -> ratio[i].value+'%')
+
+			when 'sport'
+				d3.selectAll('#sport div').remove()
+
+				ratios = []
+				cycles = ['primaire', 'college', 'lycee']
+				d3.json 'data/countries/'+country+'.json', (data) ->
+					ratios = data[filter]
+					for key in cycles
+						minPercentage  = ratios[key]['minPercentage']
+						minHoursByYear = ratios[key]['minHoursByYear']
+
+						ratio = [{"label": "", "value": minPercentage, "color": "#f6c37a", "textColor": '#834d00'},
+								 {"label": "", "value": (100-minPercentage), "color": "#45b4a4", "textColor": '#005046'}]
+
+						width  = 150
+						height = 150
+						radius = 75
+
+						vis = d3.select('#sport')
+							.append('div')
+								.classed(key, true)
+								.append('svg:svg')
+								.data([ratio])
+									.attr('width', width)
+									.attr('height', height)
+								.append('svg:g')
+									.attr('transform', 'translate('+radius+','+radius+')')
+
+						d3.select('#sport > div:last-child')
+							.append ('span')
+								.classed('info', true)
+								.text (d, i) -> '(Soit '+ratios[key].minHoursByYear+' heures par an)'
+						d3.select('#sport > div:last-child')
+							.append('span')
+								.classed('preetyName', true)
+								.text (d, i) -> ratios[key].preetyName
+
+						arc = d3.svg.arc()
+							.outerRadius(radius)
+
+						pie = d3.layout.pie()
+							.value (d) -> d.value
+
+						arcs = vis.selectAll('g.slice')
+							.data(pie)
+							.enter()
+								.append('svg:g')
+									.attr('class', 'slice')
+
+						arcs.append('svg:path')
+							.attr('fill', (d, i) -> ratio[i].color)
+							.attr('d', arc)
+
+						arcs.append('svg:text')
+							.attr 'transform', (d) ->
+								d.innerRadius = 0
+								d.outerRadius = radius
+								"translate(" + arc.centroid(d) + ")"
+
+							.attr('text-anchor', "middle")
+							.attr('fill', (d, i) -> ratio[i].textColor)
+							.attr('style', 'font-size:.7em')
+							.text((d, i) -> ratio[i].value+'%')
+
+			else
+				return
+
+
+# Triggers on filter selection in single country view
 filters = 
 	onMouseOver: () ->
+		# Get the filter information
 		info = d3.select(this).attr('data-filter')
+
+		# Search in json database which filter need to be used
 		d3.json 'data/filters.json', (root) ->
+			# Set the short text in top navigation
 			d3.select('#active-filter').text(root[info].short)
 	
 	onMouseLeave: () ->
+		# When mouseleave, we want to keep just the filter which is clicked
 		filterList.selectAll('div')
 			.each () ->
+				# We have to find the one which have active class
 				if d3.select(this).classed('active') is true
+					# Get the filter information
 					info = d3.select(this).attr('data-filter')
+					# Search in json database which filter need to be used
 					d3.json 'data/filters.json', (root) ->
+						# Set the short text in top navigation
 						d3.select('#active-filter').text(root[info].short)					
 
 	onClick: () ->
+		# Some vars
 		el = d3.select(this)
+		info = d3.select(this).attr('data-filter')
 		
+		# Remove all class active and add on clicked filter
 		filterList.selectAll('div').classed('active', false)
 		el.classed('active', true)
 
+		# Complete the top navigation
 		d3.json 'data/filters.json', (root) ->
 			d3.select('#active-filter').text(root[info].short)
+
+		# Initialization of graph with good filter
+		graph.init(info)
 
 datas = 
 	init: () ->
@@ -212,15 +484,19 @@ datas =
 		d3.select('#filters').classed('closed', true)
 
 		# Reinitialize map
-		map.init
+		map.init()
 
+		# Better with short vars (much preety)
 		el = d3.select(this)
+
+		d3.select('#displayData').attr('data-pays', el.attr('data-pays'))
 		
 		# Display data for country selected
 		d3.json 'data/countries/'+el.attr('data-pays')+'.json', (root) ->
 			d3.select('#datas h2').text modelEducatif+root.preposition+el.attr('data-pays')
 
 	close: () ->
+		# Visual blocks transitions (back to default)
 		d3.select('#leftContent').classed('extended', false)
 		d3.select('#displayData').classed('dataPanelOpened', false)
 		d3.select('#filters').classed('closed', false)

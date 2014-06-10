@@ -1,0 +1,44 @@
+/* for graphs */
+
+#sport > div {
+	width: 180px;
+	height: 180px;
+	display: inline-block;
+	margin-top: 70px;
+	position: relative;
+}
+
+#sport svg {
+	margin:auto;
+	width: 150px;
+	height: 150px;
+	display: block;
+}
+
+#sport > div:first-child {
+	margin-left:70px;
+}
+
+#sport > div:not(:last-child){
+	margin-right:60px;
+}
+
+#sport span.info {
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color: #757575;
+	bottom: -10px;
+	font-size: .8em;
+}
+
+#sport span.preetyName {
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color:#a5a5a5;
+	bottom: -50px;
+	font-size: .7em;
+}

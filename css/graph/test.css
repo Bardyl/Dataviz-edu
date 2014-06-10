@@ -1,0 +1,136 @@
+/* for graphs */
+
+#test {
+	width: 580px;
+	height: 250px;
+	position: relative;
+	margin-top: 50px;
+	margin-left: 80px;
+}
+
+#test > div {
+	display: inline-block;
+}
+
+#test .graph-left {
+	position: relative;
+	width: 100px;
+	border-top: 1px solid #dfdfdf;
+	vertical-align: top;
+}
+
+#test .graph-left span {
+	background: #f6f6f6;
+	display: block;
+	position: relative;
+	width: 54px;
+	text-align: right;
+	top: -15px;
+	padding: 5px 8px;
+	color: #b1b1b1;
+	font-size: .9em;
+}
+
+#test .graph-right {
+	position: relative;
+	margin-left: 100px;
+	width: 500px;
+	height: 209px;
+	border-left: 1px solid #b1b1b1;
+	border-bottom: 1px solid #b1b1b1;
+	margin-top:-30px;
+}
+
+#test .graph-right > div {
+	display: block;
+	position: relative;
+	width: 150px;
+	height: 209px;
+	display: inline-block;	
+	vertical-align: bottom;
+}
+
+#test .graph-right > div:first-child {
+	margin-left: 30px;
+}
+
+#test .graph-right > span {
+	display: block;
+}
+
+#test .graph-right .preetyName {
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 30px;
+	color: #a5a5a5;
+	font-size: .76em;
+	position: absolute;
+	bottom: -50px;
+}
+
+#test .graph-right .maths .graph-bar {
+	position: absolute;
+	bottom: 0;
+	left:65px;
+	width: 20px;
+	height: 0%;
+	border-top: 1px solid #f7b961;
+	border-right: 1px solid #f7b961;
+	border-left: 1px solid #f7b961;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	background: rgb(244,197,131);
+	background: -moz-linear-gradient(top,  rgba(244,197,131,1) 0%, rgba(247,186,101,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(244,197,131,1)), color-stop(100%,rgba(247,186,101,1)));
+	background: -webkit-linear-gradient(top,  rgba(244,197,131,1) 0%,rgba(247,186,101,1) 100%);
+	background: linear-gradient(to bottom,  rgba(244,197,131,1) 0%,rgba(247,186,101,1) 100%);
+}
+
+#test .graph-right .ecrit .graph-bar {
+	position: absolute;
+	bottom: 0;
+	left:65px;
+	width: 20px;
+	height: 0%;
+	border-top: 1px solid #279d95;
+	border-right: 1px solid #279d95;
+	border-left: 1px solid #279d95;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	background: rgb(94,201,193);
+	background: -moz-linear-gradient(top,  rgba(94,201,193,1) 0%, rgba(38,174,165,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(94,201,193,1)), color-stop(100%,rgba(38,174,165,1)));
+	background: -webkit-linear-gradient(top,  rgba(94,201,193,1) 0%,rgba(38,174,165,1) 100%);
+	background: linear-gradient(to bottom,  rgba(94,201,193,1) 0%,rgba(38,174,165,1) 100%);
+}
+
+#test .graph-right .science .graph-bar {
+	position: absolute;
+	bottom: 0;
+	left:65px;
+	width: 20px;
+	height: 0%;
+	border-top: 1px solid #ce5d53;
+	border-right: 1px solid #ce5d53;
+	border-left: 1px solid #ce5d53;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	background: rgb(232,121,112);
+	background: -moz-linear-gradient(top,  rgba(232,121,112,1) 0%, rgba(220,98,87,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232,121,112,1)), color-stop(100%,rgba(220,98,87,1)));
+	background: -webkit-linear-gradient(top,  rgba(232,121,112,1) 0%,rgba(220,98,87,1) 100%);
+	background: linear-gradient(to bottom,  rgba(232,121,112,1) 0%,rgba(220,98,87,1) 100%);
+}
+
+#test .graph-right .score {
+	position: absolute;
+	width: 40px;
+	display: block;
+	text-align: center;
+	margin:auto;
+	left: -10px;
+	top: -30px;
+	color: #4a4a4a;
+	font-size: .9em;
+}

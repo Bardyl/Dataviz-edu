@@ -1,0 +1,97 @@
+/* for graphs */
+
+#cycle {
+	width: 600px;
+	margin-left:80px;
+	margin-top:50px;
+}
+
+#cycle > div > div {
+	display: inline-block;
+	margin:0;
+}
+
+#cycle .graph-bar {
+	height:20px;
+	overflow:hidden;
+	width:0%;
+	position: relative;
+	margin-top: 10px;
+}
+
+#cycle .graph-bar > div {
+	height:100%;
+	display: inline-block;
+	margin:0;
+	position: relative;
+}
+
+#cycle .graph-bar > div {
+	background: rgb(243,185,117);
+	background: -moz-linear-gradient(top,  rgba(243,185,117,1) 0%, rgba(244,171,85,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,185,117,1)), color-stop(100%,rgba(244,171,85,1)));
+	background: -webkit-linear-gradient(top,  rgba(243,185,117,1) 0%,rgba(244,171,85,1) 100%);
+	background: linear-gradient(to bottom,  rgba(243,185,117,1) 0%,rgba(244,171,85,1) 100%);
+}
+
+#cycle .graph-bar > div:not(:first-child){
+	margin-left: -4px;
+	border-left: 1px solid #ec928a;
+	width: 0;
+}
+
+#cycle .graph-bar span.nombreAnneesOblig {
+	border-top: 1px solid #ce5d53;
+	border-bottom: 1px solid #ce5d53;
+	background: rgb(232,121,112);
+	background: -moz-linear-gradient(top, #e87970 0%, #dd6458 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e87970), color-stop(100%, #dd6458)));
+	background: -webkit-linear-gradient(top, #e87970 0%, #dd6458 100%);
+	background: linear-gradient(to bottom, #e87970 0%, #dd6458 100%);
+	display: block;
+	position: absolute;
+	left:0;
+	height:90%;
+	width: 0;
+}
+
+#cycle .numbers div span {
+	display: block;
+	text-align: center;
+	float: left;
+	font-weight: bold;
+}
+
+#cycle .numbers div span.nombreAnneesOblig {
+	color: #d95246;
+	font-size: 1.3em;
+} 
+
+#cycle .numbers div span.nombreAnneesNonOblig {
+	color: #f7c278;
+	font-size: 1.3em;
+}
+
+#cycle .cycle span:first-child {
+	color: #a5a5a5;
+	font-size: .9em;
+	text-align: center;
+	display: block;
+	margin-top: 20px;
+}
+
+#cycle .cycle div.bar {
+	width: 50%;
+	margin-top:15px;
+	height: 60px;
+	border-right: 1px dashed #b1b1b1;
+}
+
+#cycle .cycle span:last-child {
+	color: #4a4a4a;
+	font-size: .85em;
+	text-align: center;
+	display: block;
+	margin-top: 5px;
+	font-weight: bold;
+}

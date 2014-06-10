@@ -48,6 +48,227 @@
 		</div>
 		<div id="datas">
 			<h2></h2>
+			<h3 id="graph-description"></h3>
+			<div id="noFilter" class="active">
+				<div>
+					<p>
+						Sélectionnez un filtre pour découvrir<br />
+						différents aspects du modèle éducatif<br />
+						du pays sélectionné !
+					</p>
+					<img src="img/fleche2.png" alt="" />
+				</div>
+				<div>
+					<p>
+						Choisissez un deuxième pays puis<br />
+						comparez leurs valeurs respectives<br />
+						selon le filtre choisi !
+					</p>
+					<img src="img/fleche1.png" alt="" />
+				</div>
+			</div>
+			<div id="test">
+				<div class="graph-left">
+					<span>1000</span>
+				</div>
+				<div class="graph-right">
+					<div class="maths">
+						<span class="graph-bar">
+							<span class="score"></span>
+						</span>
+						<span class="preetyName"></span>
+					</div>
+					<div class="ecrit">
+						<span class="graph-bar">
+							<span class="score"></span>
+						</span>
+						<span class="graph-bar"></span>
+						<span class="preetyName"></span>							
+					</div>
+					<div class="science">
+						<span class="graph-bar">
+							<span class="score"></span>
+						</span>
+						<span class="graph-bar"></span>
+						<span class="preetyName"></span>
+					</div>
+				</div>					
+			</div>
+			<div id="ratioHF"></div>
+			<div id="sport"></div>
+			<div id="salaire">
+				<div class="primaire">
+					<span class="start"></span>
+					<div class="graph">
+						<span class="graph-start"></span>
+						<span class="graph-end"></span>
+					</div>
+					<span class="end"></span>
+					<span class="preetyName"></span>
+				</div>
+				<div class="college">
+					<span class="start"></span>
+					<div class="graph">
+						<span class="graph-start"></span>
+						<span class="graph-end"></span>
+					</div>
+					<span class="end"></span>
+					<span class="preetyName"></span>
+				</div>
+				<div class="lycee">
+					<span class="start"></span>
+					<div class="graph">
+						<span class="graph-start"></span>
+						<span class="graph-end"></span>
+					</div>
+					<span class="end"></span>
+					<span class="preetyName"></span>
+				</div>
+			</div>
+			<div id="cycle">
+				<div class="numbers">
+					<div class="primaire">
+						<span class="nombreAnneesOblig"></span>
+						<span class="nombreAnneesNonOblig"></span>
+					</div>
+					<div class="college">
+						<span class="nombreAnneesOblig"></span>
+						<span class="nombreAnneesNonOblig"></span>
+					</div>
+					<div class="lycee">
+						<span class="nombreAnneesOblig"></span>
+						<span class="nombreAnneesNonOblig"></span>
+					</div>
+				</div>
+				<div class="graph-bar">
+					<div class="primaire">
+						<span class="nombreAnneesOblig"></span>
+					</div>
+					<div class="college">
+						<span class="nombreAnneesOblig"></span>
+					</div>
+					<div class="lycee">
+						<span class="nombreAnneesOblig"></span>
+					</div>					
+				</div>
+				<div class="cycle">
+					<div class="primaire">
+						<span>Primaire</span>
+						<div class="bar"></div>
+						<span></span>
+					</div>
+					<div class="college">
+						<span>Collège</span>
+						<div class="bar"></div>
+						<span></span>
+					</div>
+					<div class="lycee">
+						<span>Lycée</span>
+						<div class="bar"></div>
+						<span></span>
+					</div>					
+				</div>
+			</div>
+			<div id="coutEtudiant">
+				<img src="img/coutEtudiant.png" alt="" />
+				<span class="primaire">Primaire<br /><span></span></span>
+				<span class="college">Collège<br /><span></span></span>
+				<span class="lycee">Lycée<br /><span></span></span>
+			</div>
+			<div id="encadrement">
+				<div class="primaire">
+					<div class="elevesParClass">
+						<span class="label">Nombre moyen d'élèves par classe</span><br>
+						<span class="value"></span>
+					</div>
+					<div class="elevesParEnseignant">
+						<span class="label">Nombre moyen d'élèves par enseignant</span><br>
+						<span class="value"></span>
+					</div>
+					<span>Primaire</span>
+				</div>
+				<div class="college">
+					<div class="elevesParClass">
+						<span class="label">Nombre moyen d'élèves par classe</span><br>
+						<span class="value"></span>
+					</div>
+					<div class="elevesParEnseignant">
+						<span class="label">Nombre moyen d'élèves par enseignant</span><br>
+						<span class="value"></span>
+					</div>
+					<span>Collège</span>
+				</div>
+				<div class="lycee">
+					<div class="elevesParClass">
+						<span class="label">Nombre moyen d'élèves par classe</span><br>
+						<span class="value"></span>
+					</div>
+					<div class="elevesParEnseignant">
+						<span class="label">Nombre moyen d'élèves par enseignant</span><br>
+						<span class="value"></span>
+					</div>
+					<span>Lycée</span>
+				</div>
+			</div>
+			<div id="rythme">
+				<div class="primaire">
+					<span>Primaire</span>
+					<div class="graph">
+						<div class="graph-bar">
+							<span class="totalStudy"></span>
+							<span class="totalVacs"></span>
+						</div>
+						<div class="graph-data">
+							<span class="totalStudy">
+								<span>Jours de classe dans l'année : <span></span></span><br />
+								<span>Nombre de jours par semaine : <span></span></span>
+							</span>
+							<span class="totalVacs">
+								<span>Semaines de vacances : <span></span></span><br />
+								<span>Vacances d'été : <span></span></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="college">
+					<span>Collège</span>
+					<div class="graph">
+						<div class="graph-bar">
+							<span class="totalStudy"></span>
+							<span class="totalVacs"></span>
+						</div>
+						<div class="graph-data">
+							<span class="totalStudy">
+								<span>Jours de classe dans l'année : <span></span></span><br />
+								<span>Nombre de jours par semaine : <span></span></span>
+							</span>
+							<span class="totalVacs">
+								<span>Semaines de vacances : <span></span></span><br />
+								<span>Vacances d'été : <span></span></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="lycee">
+					<span>Lycée</span>
+					<div class="graph">
+						<div class="graph-bar">
+							<span class="totalStudy"></span>
+							<span class="totalVacs"></span>
+						</div>
+						<div class="graph-data">
+							<span class="totalStudy">
+								<span>Jours de classe dans l'année : <span></span></span><br />
+								<span>Nombre de jours par semaine : <span></span></span>
+							</span>
+							<span class="totalVacs">
+								<span>Semaines de vacances : <span></span></span><br />
+								<span>Vacances d'été : <span></span></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 

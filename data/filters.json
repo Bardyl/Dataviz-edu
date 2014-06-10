@@ -9,7 +9,7 @@
 	},
 	"ratioHF": {
 		"short": "Ratio Homme/Femme (enseignants)",
-		"html" : "Ratio des enseignants homme/femme (en pourcentage)"
+		"html" : "Ratio des enseignants <span style='color:#f7c278;font-weight:bold'>homme</span>/<span style='color:#45b5a4;font-weight:bold'>femme</span> (en pourcentage)"
 	},
 	"sport": {
 		"short": "Place du sport",
@@ -17,11 +17,11 @@
 	},
 	"salaire": {
 		"short": "Salaire annuel par enseignant",
-		"html" : "Salaire annuel d’un enseignant en début et en fin de carrière (en euros)"
+		"html" : "Salaire annuel d’un enseignant en <span style='color:#f7c278;font-weight:bold'>début</span> et en <span style='color:#45b5a4;font-weight:bold'>fin</span> de carrière (en euros)"
 	},
 	"cycle": {
 		"short": "Nombre d'années par cycle",
-		"html" : "Nombre d’années du cycle obligatoire / non obligatoire"
+		"html" : "Nombre d’années du cycle <span style='color:#d95246;font-weight:bold;'>obligatoire</span> / <span style='color:#f7c278;font-weight:bold'>non obligatoire</span>"
 	},
 	"coutEtudiant": {
 		"short": "Coût d'un étudiant",

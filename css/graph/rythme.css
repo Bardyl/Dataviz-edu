@@ -1,0 +1,84 @@
+/* for graphs */
+
+#rythme {
+	margin-top: 20px;
+	margin-left: 80px;
+	position: relative;
+}
+
+#rythme .graph {
+	width: 600px;
+	margin: 0;
+	margin-top: 15px;
+	position: relative;
+}
+
+#rythme > div > span {
+	color: #a5a5a5;
+	font-size: .85em;
+}
+
+#rythme .graph-bar {
+	width:100%;
+	height: 22px;
+	overflow:hidden;
+	display: block;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#rythme .graph-bar .totalStudy {
+	width: 0;
+	height: 90%;
+	margin-right: 0%;
+	display: inline-block;
+	border: 1px solid #279d95;
+	border-radius: 3px;
+	background: rgb(94,201,193);
+	background: -moz-linear-gradient(top,  rgba(94,201,193,1) 0%, rgba(38,174,165,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(94,201,193,1)), color-stop(100%,rgba(38,174,165,1)));
+	background: -webkit-linear-gradient(top,  rgba(94,201,193,1) 0%,rgba(38,174,165,1) 100%);
+	background: linear-gradient(to bottom,  rgba(94,201,193,1) 0%,rgba(38,174,165,1) 100%);
+}
+
+#rythme .graph-data .totalStudy {
+	display: inline-block;
+}
+
+#rythme .graph-bar .totalVacs {
+	width:0%;
+	height: 90%;
+	display: inline-block;
+	border: 1px solid #f7b961;
+	border-radius: 3px;
+	background: rgb(244,197,131);
+	background: -moz-linear-gradient(top,  rgba(244,197,131,1) 0%, rgba(247,186,101,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(244,197,131,1)), color-stop(100%,rgba(247,186,101,1)));
+	background: -webkit-linear-gradient(top,  rgba(244,197,131,1) 0%,rgba(247,186,101,1) 100%);
+	background: linear-gradient(to bottom,  rgba(244,197,131,1) 0%,rgba(247,186,101,1) 100%);
+}
+
+#rythme .graph-data .totalVacs {
+	display: inline-block;
+}
+
+#rythme .graph-data {
+	color:#4a4a4a;
+	font-size: .70em;
+	margin-bottom: 20px;
+	text-align: center;
+	margin-left: 0;
+	width:100%;
+	display: block;
+	position: relative;
+}
+
+#rythme .graph-data .totalStudy span span {
+	color: #45b5a4;
+	font-weight: bold;
+}
+
+#rythme .graph-data .totalVacs span span {
+	color: #f7c278;
+	font-weight: bold;
+}

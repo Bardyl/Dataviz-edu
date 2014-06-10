@@ -1,114 +1,133 @@
 {
   "preposition": "de la ",
-  "Primaire": {
-    "Salaire enseignant annuel": {
-      "début de carrière": 25646,
-      "fin de carrière": 48916
+  "salaire": {
+    "primaire": {
+      "preetyName": "Primaire",
+      "start": 25646,
+      "end"  : 48916
     },
-    "Heures d'enseignement annuel": 918,
-    "Cycle": {
-      "Nombre d'années du cycle": 5,
-      "Nombre d'années du cycle obligatoire": 5
+    "college": {
+      "preetyName": "Collège",
+      "start": 28653,
+      "end"  : 52090
     },
-    "Parité": {
-      "Pourcentage d'homme enseignant": 17.2,
-      "Pourcentage de femme enseignante": 82.8
-    },
-    "Sport": {
-      "Pourcentage du temps minimal obligtoire par rapport à l'enseignement total": 10,
-      "Nombre d'heures minimales recommandées obligatoires par an": 108
-    },
-    "Rythme scolaire": {
-      "Jours de classe dans l'année": 144,
-      "Nombre de jours par semaine": 4.5,
-      "Vacances d'été en semaines": 8.5,
-      "Vacances totales en semaines": 16.5,
-      "Nombre de matières": 7
-    },
-    "Encadrement": {
-      "Nombre moyen d'élèves par classe": 22.7,
-      "Nombre d'élèves par enseignant": 17.5
-    },
-    "Coût": {
-      "Coût d'un élève par an (€)": 5379
+    "lycee": {
+      "preetyName": "Lycée",
+      "start": 28892,
+      "end"  : 52352
     }
   },
-  "Collège": {
-    "Salaire enseignant annuel": {
-      "début de carrière": 28653,
-      "fin de carrière": 52090
+  "test": {
+    "maths": {
+      "preetyName": "Mathématiques",
+      "score"     : 495 
     },
-    "Heures d'enseignement annuel": 646,
-    "Cycle": {
-      "Nombre d'années du cycle": 4,
-      "Nombre d'années du cycle obligatoire": 4
+    "ecrit": {
+      "preetyName": "Compréhension écrite",
+      "score"     : 505
     },
-    "Parité": {
-      "Pourcentage d'homme enseignant": 35,
-      "Pourcentage de femme enseignante": 65
-    },
-    "Sport": {
-      "Pourcentage du temps minimal obligtoire par rapport à l'enseignement total": 14,
-      "Nombre d'heures minimales recommandées obligatoires par an": 108
-    },
-    "Rythme scolaire": {
-      "Jours de classe dans l'année": 178,
-      "Nombre de jours par semaine": 5,
-      "Vacances d'été en semaines": 8.5,
-      "Vacances totales en semaines": 16.5,
-      "Nombre de matières": 10
-    },
-    "Encadrement": {
-      "Nombre moyen d'élèves par classe": 24.7,
-      "Nombre d'élèves par enseignant": "n.c."
-    },
-    "Coût": {
-      "Coût d'un élève par an (€)": 8844
-    }
-  },  
-  "Lycée": {
-    "Salaire enseignant annuel": {
-      "début de carrière": 28892,
-      "fin de carrière": 52352
-    },
-    "Heures d'enseignement annuel": 632,
-    "Cycle": {
-      "Nombre d'années du cycle": 3,
-      "Nombre d'années du cycle obligatoire": 1,
-      "Description": "arrêt à 16 ans"
-    },
-    "Parité": {
-      "Pourcentage d'homme enseignant": 46.1,
-      "Pourcentage de femme enseignante": 53.9
-    },
-    "Sport": {
-      "Pourcentage du temps minimal obligtoire par rapport à l'enseignement total": 0,
-      "Nombre d'heures minimales recommandées obligatoires par an": 0
-    },
-    "Rythme scolaire": {
-      "Jours de classe dans l'année": 144,
-      "Nombre de jours par semaine": 4.5,
-      "Vacances d'été en semaines": 8.5,
-      "Vacances totales en semaines": 16.5,
-      "Nombre de matières": 12
-    },
-    "Encadrement": {
-      "Nombre moyen d'élèves par classe": "n.c.",
-      "Nombre d'élèves par enseignant": "n.c."
-    },
-    "Coût": {
-      "Coût d'un élève par an (€)": 8844
+    "science": {
+      "preetyName": "Sciences",
+      "score"     : 499
     }
   },
-  "Budget alloué à l'éducation en pourcentage du PIB en 2010": 5.9,
-  "PIB en 2010": 1936000000000,
-  "Résultat test européen": {
-    "Mathématiques": 495,
-    "Compréhension écrite": 505,
-    "Science": 499
+  "ratioHF": {
+    "primaire": {
+      "preetyName": "Primaire",
+      "man"       : 17.2,
+      "women"     : 82.8 
+    },
+    "college": {
+      "preetyName": "Collège",
+      "man"       : 35,
+      "women"     : 65 
+    },
+    "lycee": {
+      "preetyName": "Lycée",
+      "man"       : 46.1,
+      "women"     : 53.9 
+    }
   },
-  "Nombre d'années totale obligatoire": {
-    "Nombre": 10,
-    "Description": "de 6 à 16 ans"
+  "cycle": {
+    "primaire": {
+      "number"     : 5,
+      "numberOblig": 5,
+      "preetyName" : "Primaire",
+      "hours"      : 918  
+    },
+    "college": {
+      "number"     : 4,
+      "numberOblig": 4,
+      "preetyName" : "Collège",
+      "hours"      : 646
+    },
+    "lycee": {
+      "number"     : 3,
+      "numberOblig": 1,
+      "preetyName" : "Lycée",
+      "hours"      : 632
+    }
+  },
+  "coutEtudiant": {
+    "primaire": {
+      "cout": 5379
+    },
+    "college": {
+      "cout": 8844
+    },
+    "lycee": {
+      "cout": 8844
+    }
+  },
+  "encadrement": {
+    "primaire": {
+      "elevesParClass"     : 22.7,
+      "elevesParEnseignant": 17.5
+    },
+    "college": {
+      "elevesParClass"     : 24.7,
+      "elevesParEnseignant": "N.C"
+    },
+    "lycee": {
+      "elevesParClass"     : "N.C",
+      "elevesParEnseignant": "N.C"
+    }
+  },
+  "rythme": {
+    "primaire": {
+      "daysByYear": 144,
+      "daysByWeek": 4.5,
+      "summerVacs": 8.5,
+      "totalVacs" : 16.5
+    },
+    "college": {
+      "daysByYear": 178,
+      "daysByWeek": 5,
+      "summerVacs": 8.5,
+      "totalVacs": 16.5
+    },
+    "lycee": {
+      "daysByYear": 144,
+      "daysByWeek": 4.5,
+      "summerVacs": 8.5,
+      "totalVacs": 16.5
+    }
+  },
+  "sport": {
+    "primaire": {
+      "preetyName"    : "Primaire",
+      "minPercentage" : 10,
+      "minHoursByYear": 108
+    },
+    "college": {
+      "preetyName"    : "Collège",
+      "minPercentage" : 14,
+      "minHoursByYear": 108
+    },
+    "lycee": {
+      "preetyName"    : "Lycée",
+      "minPercentage" : 0,
+      "minHoursByYear": 0
+    }
   }
 }

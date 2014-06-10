@@ -1,0 +1,37 @@
+/* for graphs */
+
+#encadrement {
+	text-align: center;
+	width:600px;
+	margin-left:80px;
+}
+
+#encadrement > div {
+	width:150px;
+	margin-top: 30px;
+	display: inline-block;
+}
+
+#encadrement > div > div {
+	margin-bottom: 60px;
+}
+
+#encadrement > div:not(:first-child){
+	margin-left: 40px;
+}
+
+#encadrement .label {
+	font-size: .78em;
+	color:#4a4a4a;	
+}
+
+#encadrement .value {
+	font-size: 1.3em;
+	color: #d95246;
+	margin-top: 10px;
+}
+
+#encadrement > div > span {
+	color: #a5a5a5;
+	font-size: .9em;
+}

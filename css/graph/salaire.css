@@ -1,0 +1,77 @@
+/* for graphs */
+
+#salaire > div {
+	display: inline-block;
+	width: 105px;
+	height: 180px;
+	position: relative;
+	top: 70px;
+}
+
+#salaire > div:first-child {
+	margin-left: 80px;
+}
+
+#salaire > div:not(:last-child) {
+	margin-right: 135px;
+}
+
+#salaire div.graph {
+	height: 85px;
+	border-left: 2px solid #b5b5b5;
+	position: relative;
+}
+
+#salaire span.start,
+#salaire span.end {
+	display: block;
+	text-align: center;
+	color: #4a4a4a;
+	font-size: .9em;
+}
+
+#salaire .graph-start {
+	display: block;
+	position: relative;
+	width:0%;
+	height: 20px;
+	border-top: 1px solid #f7b961;
+	border-right: 1px solid #f7b961;
+	border-bottom: 1px solid #f7b961;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background: rgb(244,197,131);
+	background: -moz-linear-gradient(top,  rgba(244,197,131,1) 0%, rgba(247,186,101,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(244,197,131,1)), color-stop(100%,rgba(247,186,101,1)));
+	background: -webkit-linear-gradient(top,  rgba(244,197,131,1) 0%,rgba(247,186,101,1) 100%);
+	background: linear-gradient(to bottom,  rgba(244,197,131,1) 0%,rgba(247,186,101,1) 100%);
+	top: 15px;
+	transition:1s;
+}
+
+#salaire .graph-end {
+	display: block;
+	position: relative;
+	width:0%;
+	height: 20px;
+	border-top: 1px solid #279d95;
+	border-right: 1px solid #279d95;
+	border-bottom: 1px solid #279d95;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background: rgb(94,201,193);
+	background: -moz-linear-gradient(top,  rgba(94,201,193,1) 0%, rgba(38,174,165,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(94,201,193,1)), color-stop(100%,rgba(38,174,165,1)));
+	background: -webkit-linear-gradient(top,  rgba(94,201,193,1) 0%,rgba(38,174,165,1) 100%);
+	background: linear-gradient(to bottom,  rgba(94,201,193,1) 0%,rgba(38,174,165,1) 100%);
+	top: 25px;
+	transition:1s;
+}
+
+#salaire .preetyName {
+	display: block;
+	font-size: .80em;
+	color: #a5a5a5;
+	text-align: center;
+	margin-top: 40px;
+}
