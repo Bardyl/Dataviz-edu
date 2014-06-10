@@ -109,7 +109,13 @@ header {
 	z-index:10;
 }
 
-header img {
+header img.logo {
+	position: relative;
+	top: 6px;
+	left: 10px;
+}
+
+header img:not(.logo) {
 	position: absolute;
 	right: 20px;
 	top: 12px;
